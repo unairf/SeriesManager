@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton miImageButton3;
     private Intent webIntent;
 
+    //
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
