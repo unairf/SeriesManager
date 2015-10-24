@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/first_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main" tools:context=".MainActivity"
+    android:background="@color/blanched_almond">
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:id="@+id/horizontalScrollView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" >
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_imagebuttons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/imageButton"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:onClick="readNaruto"
+                android:layout_marginLeft="60dp"/>
+            <TextView
+                android:id="@+id/textview_naruto"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_below="@id/imageButton"
+                android:text="@string/naruto_name"
+                android:layout_marginLeft="60dp"
+                android:gravity="center"/>
+
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/imageButton2"
+                android:layout_toRightOf="@id/imageButton"
+                android:layout_marginLeft="150dp"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:onClick="readAnother"/>
+            <TextView
+                android:id="@+id/textview_another"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_below="@id/imageButton2"
+                android:text="@string/another_name"
+                android:layout_marginLeft="150dp"
+                android:layout_toRightOf="@id/textview_naruto"
+                android:gravity="center"/>
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/imageButton3"
+                android:layout_toRightOf="@id/imageButton2"
+                android:layout_marginLeft="150dp"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:onClick="readLost"/>
+            <TextView
+                android:id="@+id/textview_lost"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_below="@id/imageButton3"
+                android:text="@string/lost_name"
+                android:layout_marginLeft="150dp"
+                android:layout_toRightOf="@id/textview_another"
+                android:gravity="center"/>
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Scroll to navigate between available series"
+        android:id="@+id/textView_tutorial"
+        android:layout_marginTop="120dp"
+        android:gravity="center"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_below="@id/horizontalScrollView"
+        android:layout_marginTop="49dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/relative_layout_buttons">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:id="@+id/all_lines"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button_layout"
+        android:layout_alignTop="@+id/scrollView"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>
