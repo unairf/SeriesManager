@@ -2,12 +2,16 @@ package com.unairf.seriesmanager;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.service.notification.StatusBarNotification;
+import android.support.design.widget.NavigationView;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -38,6 +42,9 @@ public class activity_splash extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
 
         final int flags = View.SYSTEM_UI_FLAG_LAYOUT_STABLE
@@ -48,6 +55,8 @@ public class activity_splash extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
         getWindow().getDecorView().setSystemUiVisibility(flags);
         setContentView(R.layout.activity_activity_splash);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);

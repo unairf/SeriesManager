@@ -15,4 +15,7 @@
     <string name="title_activity_web_view">WebViewActivity</string>
 
     <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="title_activity_splash3">SplashActivity3</string>
+    <string name="author_name">Autor: Unai Rodríguez</string>
+    <string name="greets">Gracias a Pello por comprarme la app</string>
 </resources>

@@ -209,7 +209,7 @@ public class MainActivity extends AppCompatActivity {
             String[] lineDivided = finalString[i].split("\\*");
             dinamicButton.setText(lineDivided[0]);
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(findViewById(R.id.relative_layout_buttons).getWidth() - 30, findViewById(R.id.button_layout).getHeight());
-            layoutParams.setMargins(5, 0, 0, 0); // left, top, right, bottom
+            layoutParams.setMargins(0, 0, 0, 0); // left, top, right, bottom
             dinamicButton.setLayoutParams(layoutParams);
             row2.addView(dinamicButton);
             dinamicButton.setWidth(layoutParams.width);
@@ -221,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
             drawable.setShape(GradientDrawable.RECTANGLE);
 
             //    int alpha = Color.alpha(R.color.dark_goldenrod);
-            drawable.setStroke(3, Color.DKGRAY);
+            //drawable.setStroke(3, Color.DKGRAY);
 
             //Commited
 
